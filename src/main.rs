@@ -22,7 +22,6 @@ fn main() {
 
     //on boucle sur les coordonnées y et x de l'image
     for y in 0..hauteur {
-        println!("{} / {}", y, hauteur - 1);
         for x in 0..longueur {
             //on convertit les coordonnées y et x de l'image en coordonnées du plan complexe (compris entres les bornes [x0; x1] et [y0; y1] avec l'origine du repère centrée au milieu de l'image
 
