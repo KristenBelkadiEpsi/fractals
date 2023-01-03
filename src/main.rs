@@ -45,10 +45,14 @@ fn main() {
             }
             //lorsqu'on sort de cette suite en dépassant le module max on colore le pixel (x,y) en une teinte de rouge dont l'intensité est proportionnelle au nombre d'itérations
             if z.norm() >= module_max {
-                img.put_pixel(x, y, Rgb([(255.0 * (n as f64) / (it_max as f64)) as u8, 0, 0]));
+                img.put_pixel(
+                    x,
+                    y,
+                    Rgb([(255.0 * (n as f64) / (it_max as f64)) as u8, 0, 0]),
+                );
             }
         }
     }
     //on sauvegarde l'image au format bmp
-    img.save("image.bmp");
+    img.save("image.bmp").unwrap();
 }
